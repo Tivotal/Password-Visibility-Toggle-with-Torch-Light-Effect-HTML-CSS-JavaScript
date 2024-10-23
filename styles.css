@@ -1,0 +1,196 @@
+/* Created by Tivotal */
+
+/* Google Fonts(Poppins) */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --bg-clr: #f2f2f2;
+  --txt-clr: #222;
+  --border-type: solid;
+}
+
+.show {
+  --bg-clr: #000;
+  --txt-clr: #f2f2f2;
+  --border-type: dashed;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--bg-clr);
+  color: var(--txt-clr);
+}
+
+.wrapper {
+  width: 400px;
+  height: 500px;
+  border: 0.5px solid var(--txt-clr);
+  border-radius: 10px;
+}
+
+form {
+  width: 100%;
+  height: 100%;
+  padding: 50px 30px;
+  text-align: center;
+}
+
+form h2 {
+  font-size: 25px;
+  font-weight: 600;
+  text-transform: uppercase;
+  border-bottom: 0.5px solid var(--txt-clr);
+  padding-bottom: 10px;
+}
+
+.box {
+  position: relative;
+  width: 100%;
+  height: 50px;
+  margin: 30px 0;
+}
+
+.box input {
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  outline: none;
+  border: 2px var(--border-type) var(--txt-clr);
+  border-radius: 5px;
+  font-size: 18px;
+  color: var(--txt-clr);
+  padding: 0 45px;
+}
+
+.box input.pass {
+  padding-right: 65px;
+}
+
+.box i {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 15px;
+  font-size: 18px;
+  color: var(--txt-clr);
+  pointer-events: none;
+}
+
+.pass-link {
+  margin: -15px 0 30px;
+  text-align: right;
+}
+
+.pass-link a {
+  text-decoration: none;
+  font-size: 15px;
+  color: var(--txt-clr);
+}
+
+.pass-link a:hover {
+  text-decoration: underline;
+}
+
+.btn {
+  width: 100%;
+  height: 50px;
+  background: #4070f4;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 500;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.signup-link {
+  margin-top: 50px;
+  color: var(--txt-clr);
+  font-size: 16px;
+}
+
+.signup-link a {
+  text-decoration: none;
+  color: var(--txt-clr);
+  font-weight: 600;
+}
+
+.signup-link a:hover {
+  color: #4070f4;
+  text-decoration: underline;
+}
+
+.toggle-btn {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  /*   background: red; */
+  right: 10px;
+  bottom: 10px;
+  cursor: pointer;
+}
+
+.beam {
+  position: absolute;
+  width: 100vw;
+  height: 28vh;
+  background: yellow;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 20px;
+  clip-path: polygon(0 0, 0 100%, 100% 50%);
+  mix-blend-mode: difference;
+  transform-origin: 100% 50%;
+  pointer-events: none;
+  overflow: hidden;
+  max-height: 0;
+  transition: 0.2s ease-out;
+}
+
+.show .beam {
+  max-height: 55vh;
+}
+
+.toggle-btn svg .eye {
+  fill: var(--txt-clr);
+  transform-origin: center;
+  transition: 0.3s ease;
+}
+
+.toggle-btn svg .top,
+.toggle-btn svg .bottom,
+.toggle-btn svg .lashes {
+  fill: none;
+  stroke: var(--txt-clr);
+  transform-origin: center;
+  transition: 0.3s ease;
+}
+
+.toggle-btn svg .lashes {
+  stroke-dasharray: 3px;
+  stroke-dashoffset: 3px;
+}
+
+.show svg .lashes {
+  stroke-dasharray: 0;
+  stroke-dashoffset: 0;
+}
+
+.show .toggle-btn svg .top {
+  transform: rotateX(-90deg);
+}
+
+.show .toggle-btn svg .eye {
+  transform: translateY(1px) scale(0);
+}
