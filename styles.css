@@ -143,8 +143,8 @@ form h2 {
 
 .beam {
   position: absolute;
-  width: 100vw;
-  height: 28vh;
+  width: 340px;
+  height: 0;
   background: yellow;
   top: 50%;
   transform: translateY(-50%);
@@ -154,12 +154,11 @@ form h2 {
   transform-origin: 100% 50%;
   pointer-events: none;
   overflow: hidden;
-  max-height: 0;
   transition: 0.2s ease-out;
 }
 
 .show .beam {
-  max-height: 55vh;
+  height: 125px;
 }
 
 .toggle-btn svg .eye {
